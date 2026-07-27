@@ -22,14 +22,14 @@ jobs:
           df -h /
           echo "=========================="
       - name: Verify Docker
-          run: |
+        run: |
           echo "=== Docker Verification ==="
           docker --version
           docker run --rm hello-world
           echo "Docker is working correctly!"
           echo "==========================="
       - name: Verify AWS CLI
-          run: |
+        run: |
           echo "=== AWS CLI Verification ==="
           aws --version
           aws sts get-caller-identity
@@ -37,7 +37,7 @@ jobs:
           echo "AWS CLI is configured correctly!"
           echo "============================="
       - name: Verify Git
-          run: |
+        run: |
           echo "=== Git Verification ==="
           git --version
           echo "Git is available!"
